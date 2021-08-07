@@ -1,0 +1,39 @@
+<h2>Arbol de datos de Kendo</h2>
+
+
+<div>
+    <h4>Basico</h4>
+    <kendo-treeview kendoTreeViewExpandable
+                    [nodes]="data"
+                    textField="text"
+                    [children]="buscarHijos"
+                    [hasChildren]="tieneHijos"></kendo-treeview>
+</div>
+
+<div>
+    <h4>Datos heterogeneos locales</h4>
+    <kendo-treeview kendoTreeViewExpandable
+                    kendoTreeViewHierarchyBinding
+                    [nodes]="treeNodes"
+                    [textField]="['categoryName', 'subCategoryName']"
+                    childrenField="subCategories"></kendo-treeview>
+</div>
+
+<!-- <div>
+    <h4>Datos heterogeneos Remotos</h4>
+    <kendo-treeview kendoTreeViewExpandable
+                    [nodes]="categories | async"
+                    [textField]="['CategoryName', 'ProductName']"
+                    [hasChildren]="hasChildren"
+                    [children]="fetchChildren"></kendo-treeview>
+</div> -->
+
+<div>
+    <h4>Datos Planos</h4>
+    <kendo-treeview kendoTreeViewExpandable
+                    kendoTreeViewFlatDataBinding
+                    [nodes]="treeNodesFlat"
+                    textField="desc"
+                    idField="id"
+                    parentIdField="parentId"></kendo-treeview>
+</div>

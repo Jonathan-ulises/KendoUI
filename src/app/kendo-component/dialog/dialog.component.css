@@ -1,0 +1,12 @@
+p {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 30px;
+    text-align: center;
+}
+
+.header-title {
+    background-color: white;
+    font-size: 18px;
+    line-height: 1.3em;
+    border-bottom: 1px solid darkgray;
+}

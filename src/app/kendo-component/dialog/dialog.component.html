@@ -1,0 +1,23 @@
+<h2>Ventanas de Dialog de Kendo UI</h2>
+
+<div>
+    <button kendoButton *ngIf="!abierto" (click)="abrir()"> ABRIR DIALOGO</button>
+
+    <kendo-dialog *ngIf="abierto" (close)="cerrar('cancel')" [minWidth]="250" [width]="520" [height]="500">
+        <!-- Titulo personalisado -->
+        <kendo-dialog-titlebar class="header-title">
+            <div>
+                <span>Filtros</span>
+            </div>
+        </kendo-dialog-titlebar>
+        <p>
+            Estas seguro de continuar??
+        </p>
+
+        <kendo-dialog-actions>
+            <button kendoButton (click)="cerrar('no')">No</button>
+            <button kendoButton (click)="cerrar('yes')" [primary]="true">Yes</button>
+        </kendo-dialog-actions>
+        
+    </kendo-dialog>
+</div>
